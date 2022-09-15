@@ -51,7 +51,8 @@
                 <!-- sezione rubrica -->
                 <div id="rubrica">
                     <ul>
-                        <li></li>
+                        <li v-for="(nome, indice) in rubrica"><img src="/img/avatar{{ nome.avatar }}.jpg" alt="">{{
+                            nome.name }}</li>
                     </ul>
                 </div>
             </div>

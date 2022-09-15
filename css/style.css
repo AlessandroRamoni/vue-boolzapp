@@ -250,3 +250,10 @@ header{
     color: #b9ac9e;
     padding-left: 30px;
 }
+
+/* SEZIONE RUBRICA V-FOR */
+
+#rubrica ul li{
+    font-size: 1.5em;
+    color: red;
+}
