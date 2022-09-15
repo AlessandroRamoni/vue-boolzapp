@@ -72,3 +72,58 @@ meter {
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    background-color: rgb(187, 245, 140);
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 80%;
+    height: 90vh;
+    display: flex;
+}
+
+#sinistra{
+    border: 1px solid blue;
+    flex-basis: 35%;
+}
+
+#destra{
+    border: 2px solid purple;
+    flex-grow: 1;
+}
+
+#container #sinistra .container-rubrica header .contenitore-immagine{
+    width: 50px;
+}
+
+#container #sinistra .container-rubrica header .contenitore-immagine img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+.contenitore-immagine{
+    display: flex;
+    align-items: center;
+   
+}
+
+.contenitore-icone span i{
+    padding-left: 10px;
+}
+
+.contenitore-icone span i:first-child{
+    margin-right: 10px;
+}
