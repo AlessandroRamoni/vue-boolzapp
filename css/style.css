@@ -253,7 +253,16 @@ header{
 
 /* SEZIONE RUBRICA V-FOR */
 
+#rubrica ul{
+    background-color: #ffffff;
+}
+
 #rubrica ul li{
-    font-size: 1.5em;
-    color: red;
+    font-size: 1em;
+    color: black;
+}
+
+#rubrica ul li img{
+    width: 50px;
+    border-radius: 50%;
 }
