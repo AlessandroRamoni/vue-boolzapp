@@ -157,6 +157,10 @@ header{
     margin-left: 10px;
 }
 
+#icona-silenziosa i{
+    color: #8edafc;
+}
+
 /* SEZIONE INPUT */
 
 #cerca{
