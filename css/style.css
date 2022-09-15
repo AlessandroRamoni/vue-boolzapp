@@ -179,3 +179,31 @@ header{
     color: #b9ac9e;
     padding-left: 30px;
 }
+
+/* SEZIONE CHAT */
+
+#destra #container-chat header .contenitore-immagine{
+    width: 50px;
+}
+
+#destra #container-chat header .contenitore-immagine img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#ultimo-accesso{
+    font-size: 1em;
+}
+
+#testo-header-dx{
+    font-size: 0.5em;
+    padding-left: 10px;
+}
+
+#contenitore-icone-dx{
+    margin-right: 10px;
+}
+
+#contenitore-icone-dx span i{
+    padding-right: 10px;
+}
