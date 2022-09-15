@@ -91,12 +91,12 @@ meter {
 }
 
 #sinistra{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     flex-basis: 35%;
 }
 
 #destra{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     flex-grow: 1;
 }
 
@@ -206,4 +206,43 @@ header{
 
 #contenitore-icone-dx span i{
     padding-right: 10px;
+}
+
+#chat-principale{
+    height: 70vh;
+    background-image: url(../img/mine.jpg);
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+#scrivi{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #f3eeea;
+}
+
+#scrivi div input{
+    background-color: #ffffff;
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#scrivi div i:first-child{
+    padding-left: 20px;
+}
+
+#scrivi div i:last-child{
+    padding-right: 20px;
+}
+
+#scrivi input::placeholder{
+    color: #b9ac9e;
+    padding-left: 30px;
 }
