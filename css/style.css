@@ -112,12 +112,12 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
+    height: 10vh;
 }
 
 .contenitore-immagine{
     display: flex;
     align-items: center;
-   
 }
 
 .contenitore-icone span i{
@@ -126,4 +126,31 @@ header{
 
 .contenitore-icone span i:first-child{
     margin-right: 10px;
+}
+
+#contenitore-notifiche{
+    background-color: #8edafc;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contenitore-notifiche i{
+    font-size: 1.8em;
+    background-color: #f2fbff;
+    border-radius: 50%;
+    
+}
+
+#notifiche #contenitore-notifiche p{
+    display: inline-block;
+}
+
+#notifiche #contenitore-notifiche a{
+    display: inline-block;
+}
+
+#testo-notifiche{
+    margin-left: 10px;
 }
