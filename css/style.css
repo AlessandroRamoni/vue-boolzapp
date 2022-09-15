@@ -88,6 +88,7 @@ meter {
     width: 80%;
     height: 90vh;
     display: flex;
+    overflow: hidden;
 }
 
 #sinistra{
@@ -253,13 +254,19 @@ header{
 
 /* SEZIONE RUBRICA V-FOR */
 
+
 #rubrica ul{
     background-color: #ffffff;
 }
 
+
 #rubrica ul li{
     font-size: 1em;
     color: black;
+}
+
+#rubrica ul li:hover{
+    background-color: #e9ebeb;
 }
 
 #rubrica ul li img{
