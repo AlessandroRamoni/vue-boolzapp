@@ -73,6 +73,8 @@ meter {
     -webkit-user-drag: element;
 }
 
+/* CLASSI PERSONALI */
+
 *{
     padding: 0;
     margin: 0;
@@ -153,4 +155,27 @@ header{
 
 #testo-notifiche{
     margin-left: 10px;
+}
+
+/* SEZIONE INPUT */
+
+#cerca{
+    background-color: #f6f6f6;
+    height: 8vh;
+    position: relative;
+}
+
+#cerca input{
+    border: 1px solid #978d82;
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cerca input::placeholder{
+    color: #b9ac9e;
+    padding-left: 30px;
 }
