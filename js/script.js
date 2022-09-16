@@ -170,6 +170,7 @@ const app = new Vue({
   el: "#container",
   data: {
     contattoAttivo: 0,
+    // status: true,
     rubrica: [
       {
         name: "Michele",

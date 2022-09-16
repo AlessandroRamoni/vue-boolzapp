@@ -233,6 +233,16 @@ header{
     background-position: center center;
 }
 
+.sent{
+    background-color: #d5f9ba;
+    text-align: right;
+}
+
+.received{
+    background-color: #ffffff;
+    text-align: left;
+}
+
 #scrivi{
     height: 10vh;
     display: flex;

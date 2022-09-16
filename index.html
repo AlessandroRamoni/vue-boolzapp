@@ -68,9 +68,11 @@
             <div id="container-chat">
                 <header>
                     <div class="contenitore-immagine">
-                        <img src="./img/avatar_1.jpg" alt="io">
+                        <!-- :src="'img/avatar' + rubrica[contattoAttivo].avatar + '.jpg'" -->
+                        <img :src="'img/avatar' + rubrica[contattoAttivo].avatar + '.jpg'"
+                            :alt="rubrica[contattoAttivo].name">
                         <div id="testo-header-dx">
-                            <span>Michele</span>
+                            <span>{{ rubrica[contattoAttivo].name }}</span>
                             <span id="ultimo-accesso">Ultimo accesso oggi alle 12.00</span>
                         </div>
                     </div>
@@ -80,7 +82,14 @@
                         <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
                     </div>
                 </header>
-                <main id="chat-principale"></main>
+                <!-- CHAT WHATSAPP -->
+                <main id="chat-principale">
+                    <div v-for="(testo, indice) in rubrica[contattoAttivo].messages"
+                        :class="rubrica[indice].status === 'sent' ? 'sent' : 'received'">
+                        <!-- :class="index == indiceAttivo ? 'active' : ''" -->
+                        {{testo.message}}
+                    </div>
+                </main>
                 <div id="scrivi">
                     <div><i class="fa-regular fa-face-smile"></i></div>
                     <div><input type="textarea" placeholder="Scrivi un messaggio"></div>
