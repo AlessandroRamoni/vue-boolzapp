@@ -293,7 +293,7 @@ header{
     font-size: 0.8em;
 }
 
-#rubrica ul li:hover{
+.active{
     background-color: #e9ebeb;
 }
 

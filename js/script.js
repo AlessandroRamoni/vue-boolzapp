@@ -334,4 +334,9 @@ const app = new Vue({
       },
     ],
   },
+  methods: {
+    attivaIndice(indice) {
+      this.contattoAttivo = indice;
+    },
+  },
 });

@@ -51,7 +51,8 @@
                 <!-- sezione rubrica -->
                 <div id="rubrica">
                     <ul>
-                        <li v-for="(nome, indice) in rubrica"><img :src="'./img/avatar'+nome.avatar+'.jpg'" alt="">
+                        <li v-for="(nome, indice) in rubrica" :class="{ active: indice === contattoAttivo}"
+                            @click="attivaIndice(indice)"><img :src="'./img/avatar'+nome.avatar+'.jpg'" alt="">
                             <div id="nome-accesso">
                                 <p>{{
                                     nome.name }}</p>
