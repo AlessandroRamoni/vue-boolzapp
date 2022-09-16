@@ -43,7 +43,7 @@
                         </div>
                         <div id="testo-notifiche">
                             <p>Ricevi notifiche di nuovi messaggi</p>
-                            <a href="#">Attiva notifiche desktop</a>
+                            <a href="#" target="_blank">Attiva notifiche desktop</a>
                         </div>
                     </div>
                 </div>
@@ -69,6 +69,7 @@
         <!-- sezione destra -->
         <div id="destra">
             <div id="container-chat">
+                <!-- header dx -->
                 <header>
                     <div class="contenitore-immagine">
                         <!-- :src="'img/avatar' + rubrica[contattoAttivo].avatar + '.jpg'" -->
@@ -87,13 +88,14 @@
                 </header>
                 <!-- CHAT WHATSAPP -->
                 <main id="chat-principale">
-                    <div v-for="(singoloMessaggio, indice) in rubrica[contattoAttivo].messages"
+                    <div class="clear" v-for="(singoloMessaggio, indice) in rubrica[contattoAttivo].messages"
                         :class="singoloMessaggio.status === 'sent' ? 'sent' : 'received'">
                         <!-- :class="index == indiceAttivo ? 'active' : ''" -->
-                        <span>{{singoloMessaggio.message}}</span>
+                        <span>{{ singoloMessaggio.message }}</span>
                         <span>{{ singoloMessaggio.date }}</span>
                     </div>
                 </main>
+                <!-- sezione "scrivi messaggio" -->
                 <div id="scrivi">
                     <div><i class="fa-regular fa-face-smile"></i></div>
                     <div><input type="text" v-model="messaggioDiTesto" @keyUp.enter="aggiungiMessaggio"

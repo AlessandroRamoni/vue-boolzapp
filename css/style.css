@@ -234,8 +234,11 @@ header{
 }
 
 #chat-principale div span:last-child{
-    color: red;
-    margin-right: 0;
+    color: #b9ac9e;
+    font-size: 0.6em;
+    float: right;
+    bottom: 0px;
+
 }
 
 .sent{
@@ -246,6 +249,7 @@ header{
     margin-left: auto;
     margin-right: 20px;
     margin-top: 5px;
+    /* overflow-wrap: auto; */
 }
 
 .sent:first-child{
@@ -259,10 +263,17 @@ header{
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 5px;
+    /* overflow-wrap: auto; */
 }
 
 .received:first-child{
     margin-top: 0;
+}
+
+.clear::after{
+    clear: both;
+    display: table;
+    content: "";
 }
 
 #scrivi{

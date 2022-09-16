@@ -353,7 +353,7 @@ const app = new Vue({
           const risposta = {
             // date: moment().format("DD/MM/YYYY hh:mm:ss"),
             date: moment().format("hh:mm:ss"),
-            message: "OK",
+            message: "Ok",
             status: "received",
           };
           this.rubrica[this.contattoAttivo].messages.push(risposta);
