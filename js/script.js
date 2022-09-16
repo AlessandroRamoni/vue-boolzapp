@@ -343,8 +343,21 @@ const app = new Vue({
       this.messaggioDiTesto = "";
       if (messaggioDaAggiungere.length > 0) {
         let nuovoMessaggio = {
+          // date: moment().format("DD/MM/YYYY hh:mm:ss"),
+          date: moment().format("hh:mm:ss"),
           message: messaggioDaAggiungere,
+          status: "sent",
         };
+        this.rubrica[this.contattoAttivo].messages.push(nuovoMessaggio);
+        setTimeout(() => {
+          const risposta = {
+            // date: moment().format("DD/MM/YYYY hh:mm:ss"),
+            date: moment().format("hh:mm:ss"),
+            message: "OK",
+            status: "received",
+          };
+          this.rubrica[this.contattoAttivo].messages.push(risposta);
+        }, 1000);
 
         console.log(messaggioDaAggiungere);
       } else {

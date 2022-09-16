@@ -12,6 +12,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
         integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
     <script src="./js/script.js" defer></script>
     <title>BoolZapp</title>
 </head>
@@ -87,7 +90,8 @@
                     <div v-for="(singoloMessaggio, indice) in rubrica[contattoAttivo].messages"
                         :class="singoloMessaggio.status === 'sent' ? 'sent' : 'received'">
                         <!-- :class="index == indiceAttivo ? 'active' : ''" -->
-                        {{singoloMessaggio.message}}
+                        <span>{{singoloMessaggio.message}}</span>
+                        <span>{{ singoloMessaggio.date }}</span>
                     </div>
                 </main>
                 <div id="scrivi">
