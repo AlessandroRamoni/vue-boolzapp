@@ -86,7 +86,7 @@ meter {
     margin: 0 auto;
     margin-top: 5vh;
     width: 80%;
-    height: 90vh;
+    height: calc(100vh - 10vh);
     display: flex;
     overflow: hidden;
 }
@@ -101,6 +101,8 @@ meter {
     flex-grow: 1;
 }
 
+/* SEZIONE SINISTRA APP */
+
 #container #sinistra .container-rubrica header .contenitore-immagine{
     width: 50px;
 }
@@ -109,6 +111,8 @@ meter {
     width: 100%;
     border-radius: 50%;
 }
+
+/* header sx */
 
 header{
     display: flex;
@@ -131,6 +135,8 @@ header{
     margin-right: 10px;
 }
 
+/* notifiche sx */
+
 #contenitore-notifiche{
     background-color: #8edafc;
     height: 10vh;
@@ -152,6 +158,9 @@ header{
 
 #notifiche #contenitore-notifiche a{
     display: inline-block;
+    text-decoration: underline;
+    color: #978d82;
+    font-size: 0.9em;
 }
 
 #testo-notifiche{
@@ -162,11 +171,11 @@ header{
     color: #8edafc;
 }
 
-/* SEZIONE INPUT */
+/* sezione "cerca" sx */
 
 #cerca{
     background-color: #f6f6f6;
-    height: 8vh;
+    height: 6vh;
     position: relative;
 }
 
@@ -180,12 +189,16 @@ header{
     transform: translate(-50%, -50%);
 }
 
+#cerca input textarea{
+    color: #ffffff;
+}
+
 #cerca input::placeholder{
     color: #b9ac9e;
     padding-left: 30px;
 }
 
-/* SEZIONE CHAT */
+/* SEZIONE CHAT DX */
 
 #destra #container-chat header .contenitore-immagine{
     width: 50px;
@@ -254,6 +267,13 @@ header{
 
 /* SEZIONE RUBRICA V-FOR */
 
+#nome-accesso{
+    padding-left: 15px;
+}
+
+#rubrica{
+    overflow-y: scroll;
+}
 
 #rubrica ul{
     background-color: #ffffff;
@@ -263,6 +283,14 @@ header{
 #rubrica ul li{
     font-size: 1em;
     color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#rubrica ul li div p:last-child{
+    color: #b9ac9e;
+    font-size: 0.8em;
 }
 
 #rubrica ul li:hover{

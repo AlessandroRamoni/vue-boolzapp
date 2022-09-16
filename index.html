@@ -51,8 +51,13 @@
                 <!-- sezione rubrica -->
                 <div id="rubrica">
                     <ul>
-                        <li v-for="(nome, indice) in rubrica"><img :src="'./img/avatar'+nome.avatar+'.jpg'" alt="">{{
-                            nome.name }}</li>
+                        <li v-for="(nome, indice) in rubrica"><img :src="'./img/avatar'+nome.avatar+'.jpg'" alt="">
+                            <div id="nome-accesso">
+                                <p>{{
+                                    nome.name }}</p>
+                                <p>Ultimo messaggio inviato</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
