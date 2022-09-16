@@ -235,12 +235,16 @@ header{
 
 .sent{
     background-color: #d5f9ba;
-    text-align: right;
+    width: 45%;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .received{
     background-color: #ffffff;
-    text-align: left;
+    width: 45%;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #scrivi{

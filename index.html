@@ -84,15 +84,16 @@
                 </header>
                 <!-- CHAT WHATSAPP -->
                 <main id="chat-principale">
-                    <div v-for="(testo, indice) in rubrica[contattoAttivo].messages"
-                        :class="rubrica[indice].status === 'sent' ? 'sent' : 'received'">
+                    <div v-for="(singoloMessaggio, indice) in rubrica[contattoAttivo].messages"
+                        :class="singoloMessaggio.status === 'sent' ? 'sent' : 'received'">
                         <!-- :class="index == indiceAttivo ? 'active' : ''" -->
-                        {{testo.message}}
+                        {{singoloMessaggio.message}}
                     </div>
                 </main>
                 <div id="scrivi">
                     <div><i class="fa-regular fa-face-smile"></i></div>
-                    <div><input type="textarea" placeholder="Scrivi un messaggio"></div>
+                    <div><input type="text" v-model="messaggioDiTesto" @keyUp.enter="aggiungiMessaggio"
+                            placeholder="Scrivi un messaggio"></div>
                     <div><i class="fa-solid fa-microphone"></i></div>
                 </div>
             </div>

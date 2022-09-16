@@ -170,12 +170,11 @@ const app = new Vue({
   el: "#container",
   data: {
     contattoAttivo: 0,
-    // status: true,
+    messaggioDiTesto: "",
     rubrica: [
       {
         name: "Michele",
         avatar: "_1",
-        visible: true,
         messages: [
           {
             date: "10/01/2020 15:30:55",
@@ -338,6 +337,19 @@ const app = new Vue({
   methods: {
     attivaIndice(indice) {
       this.contattoAttivo = indice;
+    },
+    aggiungiMessaggio() {
+      const messaggioDaAggiungere = this.messaggioDiTesto;
+      this.messaggioDiTesto = "";
+      if (messaggioDaAggiungere.length > 0) {
+        let nuovoMessaggio = {
+          message: messaggioDaAggiungere,
+        };
+
+        console.log(messaggioDaAggiungere);
+      } else {
+        console.log("Scrivi qualcosa");
+      }
     },
   },
 });
