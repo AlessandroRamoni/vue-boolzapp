@@ -125,6 +125,7 @@ header{
 .contenitore-immagine{
     display: flex;
     align-items: center;
+    padding-left: 10px;
 }
 
 .contenitore-icone span i{
@@ -143,6 +144,7 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 15px;
 }
 
 #contenitore-notifiche i{
@@ -211,11 +213,17 @@ header{
 
 #ultimo-accesso{
     font-size: 1em;
+    display: inline-block;
+    width: 100px;
 }
 
 #testo-header-dx{
     font-size: 0.5em;
     padding-left: 10px;
+}
+
+#testo-header-dx span:first-child{
+    font-size: 1.8em;
 }
 
 #contenitore-icone-dx{
