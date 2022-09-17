@@ -236,9 +236,8 @@ header{
 #chat-principale div span:last-child{
     color: #b9ac9e;
     font-size: 0.6em;
-    float: right;
     bottom: 0px;
-
+    align-self: flex-end;
 }
 
 .sent{
@@ -270,10 +269,9 @@ header{
     margin-top: 0;
 }
 
-.clear::after{
-    clear: both;
-    display: table;
-    content: "";
+.flex{
+    display: flex;
+    justify-content: space-between;
 }
 
 #scrivi{

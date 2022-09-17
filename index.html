@@ -88,7 +88,7 @@
                 </header>
                 <!-- CHAT WHATSAPP -->
                 <main id="chat-principale">
-                    <div class="clear" v-for="(singoloMessaggio, indice) in rubrica[contattoAttivo].messages"
+                    <div class="flex" v-for="(singoloMessaggio, indice) in rubrica[contattoAttivo].messages"
                         :class="singoloMessaggio.status === 'sent' ? 'sent' : 'received'">
                         <!-- :class="index == indiceAttivo ? 'active' : ''" -->
                         <span>{{ singoloMessaggio.message }}</span>
