@@ -54,11 +54,13 @@
                 <!-- sezione rubrica -->
                 <div id="rubrica">
                     <ul>
-                        <li v-for="(nome, indice) in rubrica" :class="{ active: indice === contattoAttivo}"
-                            @click="attivaIndice(indice)"><img :src="'./img/avatar'+nome.avatar+'.jpg'" alt="">
-                            <div id="nome-accesso">
+                        <!-- due V-FOR nello stesso TAG? -->
+                        <li v-for="(elemento, indice) in rubrica" v-for="messaggio in messages"
+                            :class="{ active: indice === contattoAttivo}" @click="attivaIndice(indice)"><img
+                                :src="'./img/avatar'+elemento.avatar+'.jpg'" alt="">
+                            <div id="elemento-accesso">
                                 <p>{{
-                                    nome.name }}</p>
+                                    elemento.name }}</p>
                                 <p>Ultimo messaggio inviato</p>
                             </div>
                         </li>

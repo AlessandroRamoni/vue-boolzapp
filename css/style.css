@@ -231,6 +231,7 @@ header{
     background-image: url(../img/mine.jpg);
     background-repeat: repeat;
     background-position: center center;
+    overflow-y: scroll;
 }
 
 #chat-principale div span:last-child{
@@ -238,6 +239,7 @@ header{
     font-size: 0.6em;
     bottom: 0px;
     align-self: flex-end;
+    text-align: right;
 }
 
 .sent{
@@ -314,6 +316,7 @@ header{
 
 #rubrica{
     overflow-y: scroll;
+    height: 393px;
 }
 
 #rubrica ul{
