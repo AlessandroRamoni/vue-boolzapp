@@ -363,8 +363,7 @@ const app = new Vue({
             "Birretta?",
             "Grazie",
           ];
-          let messaggioDaAggiungere;
-          const messaggioRandom = Math.floor(Math.random() * 7) + 1;
+          const messaggioRandom = Math.floor(Math.random() * 7);
 
           /*
           if (messaggioRandom === 1) {
@@ -384,6 +383,7 @@ const app = new Vue({
           }
           */
 
+          /*
           switch (messaggioRandom) {
             case 1:
               messaggioDaAggiungere = opzioniMessaggio[0];
@@ -408,16 +408,15 @@ const app = new Vue({
               break;
             default:
           }
-
+*/
+          console.log(opzioniMessaggio[messaggioRandom]);
           const risposta = {
             date: moment().format("hh:mm:ss"),
-            message: messaggioDaAggiungere,
+            message: opzioniMessaggio[messaggioRandom],
             status: "received",
           };
           this.rubrica[this.contattoAttivo].messages.push(risposta);
         }, 1000);
-
-        console.log(messaggioDaAggiungere);
       } else {
         console.log("Scrivi qualcosa");
       }
