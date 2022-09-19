@@ -365,6 +365,7 @@ const app = new Vue({
           let messaggioDaAggiungere;
           const messaggioRandom = Math.floor(Math.random() * 7) + 1;
 
+          /*
           if (messaggioRandom === 1) {
             messaggioDaAggiungere = opzioniMessaggio[0];
           } else if (messaggioRandom === 2) {
@@ -380,9 +381,34 @@ const app = new Vue({
           } else {
             messaggioDaAggiungere = opzioniMessaggio[6];
           }
+          */
+
+          switch (messaggioRandom) {
+            case 1:
+              messaggioDaAggiungere = opzioniMessaggio[0];
+              break;
+            case 2:
+              messaggioDaAggiungere = opzioniMessaggio[1];
+              break;
+            case 3:
+              messaggioDaAggiungere = opzioniMessaggio[2];
+              break;
+            case 4:
+              messaggioDaAggiungere = opzioniMessaggio[3];
+              break;
+            case 5:
+              messaggioDaAggiungere = opzioniMessaggio[4];
+              break;
+            case 6:
+              messaggioDaAggiungere = opzioniMessaggio[5];
+              break;
+            case 7:
+              messaggioDaAggiungere = opzioniMessaggio[6];
+              break;
+            default:
+          }
 
           const risposta = {
-            // sto lavorando sull'inserimento di un messagio random tra alcuni
             date: moment().format("hh:mm:ss"),
             message: messaggioDaAggiungere,
             status: "received",
