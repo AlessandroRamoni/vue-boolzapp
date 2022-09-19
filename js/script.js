@@ -171,6 +171,8 @@ const app = new Vue({
   data: {
     contattoAttivo: 0,
     messaggioDiTesto: "",
+    cercaContatto: "",
+
     rubrica: [
       {
         name: "Michele",
@@ -334,6 +336,7 @@ const app = new Vue({
       },
     ],
   },
+
   methods: {
     attivaIndice(indice) {
       this.contattoAttivo = indice;
@@ -350,10 +353,26 @@ const app = new Vue({
         };
         this.rubrica[this.contattoAttivo].messages.push(nuovoMessaggio);
         setTimeout(() => {
+          let opzioniMessaggio = [
+            "Ok",
+            "Ti chiamo dopo",
+            "neanche se mi paghi",
+          ];
+          let messaggioDaAggiungere;
+          const messaggioRandom = Math.floor(Math.random() * 3) + 1;
+
+          if (messaggioRandom === 1) {
+            messaggioDaAggiungere = opzioniMessaggio[0];
+          } else if (messaggioRandom === 2) {
+            messaggioDaAggiungere = opzioniMessaggio[1];
+          } else {
+            messaggioDaAggiungere = opzioniMessaggio[2];
+          }
+
           const risposta = {
-            // date: moment().format("DD/MM/YYYY hh:mm:ss"),
+            // sto lavorando sull'inserimento di un messagio random tra alcuni
             date: moment().format("hh:mm:ss"),
-            message: "Ok",
+            message: messaggioDaAggiungere,
             status: "received",
           };
           this.rubrica[this.contattoAttivo].messages.push(risposta);
@@ -363,6 +382,9 @@ const app = new Vue({
       } else {
         console.log("Scrivi qualcosa");
       }
+    },
+    controlla() {
+      console.log(this.cercaContatto);
     },
   },
 });
