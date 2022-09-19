@@ -357,16 +357,28 @@ const app = new Vue({
             "Ok",
             "Ti chiamo dopo",
             "neanche se mi paghi",
+            "A stasera",
+            "Saluti e baci",
+            "Birretta?",
+            "Grazie",
           ];
           let messaggioDaAggiungere;
-          const messaggioRandom = Math.floor(Math.random() * 3) + 1;
+          const messaggioRandom = Math.floor(Math.random() * 7) + 1;
 
           if (messaggioRandom === 1) {
             messaggioDaAggiungere = opzioniMessaggio[0];
           } else if (messaggioRandom === 2) {
             messaggioDaAggiungere = opzioniMessaggio[1];
-          } else {
+          } else if (messaggioRandom === 3) {
             messaggioDaAggiungere = opzioniMessaggio[2];
+          } else if (messaggioRandom === 4) {
+            messaggioDaAggiungere = opzioniMessaggio[3];
+          } else if (messaggioRandom === 5) {
+            messaggioDaAggiungere = opzioniMessaggio[4];
+          } else if (messaggioRandom === 6) {
+            messaggioDaAggiungere = opzioniMessaggio[5];
+          } else {
+            messaggioDaAggiungere = opzioniMessaggio[6];
           }
 
           const risposta = {
