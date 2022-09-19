@@ -177,6 +177,7 @@ const app = new Vue({
       {
         name: "Michele",
         avatar: "_1",
+        visible: true,
         messages: [
           {
             date: "10/01/2020 15:30:55",
@@ -423,6 +424,19 @@ const app = new Vue({
     },
     controlla() {
       console.log(this.cercaContatto);
+      const contattoSenzaMaiuscole = this.cercaContatto.toLowerCase();
+      console.log(contattoSenzaMaiuscole);
+
+      this.rubrica.forEach((element) => {
+        console.log(element.name);
+        const nomeTrasformato = element.name.toLowerCase();
+        console.log(nomeTrasformato);
+        if (nomeTrasformato.includes(contattoSenzaMaiuscole)) {
+          element.visible = true;
+        } else {
+          element.visible = false;
+        }
+      });
     },
   },
 });

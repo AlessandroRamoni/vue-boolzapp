@@ -258,7 +258,6 @@ header{
     margin-left: auto;
     margin-right: 30px;
     margin-top: 20px;
-    /* overflow-wrap: auto; */
 }
 
 .received{
@@ -268,7 +267,6 @@ header{
     border-radius: 10px;
     margin-left: 30px;
     margin-top: 20px;
-    /* overflow-wrap: auto; */
 }
 
 

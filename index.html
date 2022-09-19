@@ -56,7 +56,7 @@
                 <div id="rubrica">
                     <ul>
                         <!-- due V-FOR nello stesso TAG? -->
-                        <li v-for="(elemento, indice) in rubrica" v-for="messaggio in messages"
+                        <li v-for="(elemento, indice) in rubrica" v-if="elemento.visible == true"
                             :class="{ active: indice === contattoAttivo}" @click="attivaIndice(indice)"><img
                                 :src="'./img/avatar'+elemento.avatar+'.jpg'" alt="">
                             <div id="elemento-accesso">
